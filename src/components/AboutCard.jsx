@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-export default function PropertyCard({ image, title, price }) {
+export default function AboutCard({ image, title, price }) {
   return (
     <div className="border rounded-lg overflow-hidden shadow hover:shadow-xl transition">
       <Image src={image} alt={title} width={400} height={250} />
