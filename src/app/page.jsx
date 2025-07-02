@@ -1,13 +1,13 @@
 import Navbar from '@/components/Navbar';
 import HeroSection from '@/components/HeroSecition';
-import FeaturesSection from '@/components/FeaturesSection';
 import Footer from '@/components/Footer';
 import React from 'react';
 import AboutCard from '@/components/AboutCard';
+import OurProjects from '@/components/OurProjects';
+import InteriorDesign from '@/components/Interior';
 
 const Main = () => {
   const properties = [
-    { image: "/images/house1.jpg", title: "Modern Family House", price: "450,000" },
     { image: "/images/house2.jpg", title: "Luxury Villa", price: "1,200,000" },
     { image: "/images/house3.jpg", title: "Downtown Apartment", price: "650,000" },
   ];
@@ -18,7 +18,7 @@ const Main = () => {
       <HeroSection />
 
       {/* About Section */}
-      <section className="py-16 px-6 bg-white">
+      <section className="py-16 px-6 bg-[#fcf9cc]">
         <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center text-[#873e23]">
           About EstatePro
         </h2>
@@ -27,14 +27,15 @@ const Main = () => {
         </p>
 
         {/* Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          {properties.map((p, i) => (
+        <div className="flex justify-between gap-6 flex-wrap max-w-5xl mx-auto">
+          {properties.slice(0, 2).map((p, i) => (
             <AboutCard key={i} {...p} />
           ))}
         </div>
       </section>
 
-      <FeaturesSection />
+      <OurProjects />
+      <InteriorDesign />
       <Footer />
     </div>
   );

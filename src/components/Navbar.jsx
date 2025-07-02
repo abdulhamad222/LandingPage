@@ -13,9 +13,9 @@ export default function Navbar() {
 
       {/* Desktop Menu */}
       <div className="hidden md:flex space-x-6">
-        <Link href="#">About</Link>
-        <Link href="#">Our Projects</Link>
-        <Link href="#">Interior</Link>
+        <Link href="#101">About</Link>
+        <Link href="#102">Our Projects</Link>
+        <Link href="#interior">Interior</Link>
       </div>
 
       {/* Contact Button */}
@@ -37,7 +37,7 @@ export default function Navbar() {
         <div className="absolute top-full left-0 w-full bg-white shadow-md flex flex-col items-center space-y-4 py-4 md:hidden z-50">
           <Link href="#" onClick={() => setMenuOpen(false)}>About</Link>
           <Link href="#" onClick={() => setMenuOpen(false)}>Our Projects</Link>
-          <Link href="#" onClick={() => setMenuOpen(false)}>Interior</Link>
+          <Link href="#interior" onClick={() => setMenuOpen(false)}>Interior</Link>
           <button className="bg-[#873e23] text-white hover:bg-[#833e26] px-4 py-2 rounded">
             Contact
           </button>
