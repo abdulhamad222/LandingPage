@@ -7,7 +7,6 @@ import OurProjects from '@/components/OurProjects';
 import InteriorDesign from '@/components/Interior';
 import HeroSection2 from '@/components/Hero2';
 import Contact from '@/components/Contact';
-
 const Main = () => {
   const properties = [
     { image: "/images/house2.jpg", title: "Luxury Villa", price: "1,200,000" },
@@ -30,8 +29,8 @@ const Main = () => {
 
         {/* Cards */}
         <div className="flex justify-between gap-6 flex-wrap max-w-5xl mx-auto">
-          {properties.slice(0, 2).map((p, i) => (
-            <AboutCard key={i} {...p} />
+          {properties.map((p, i) => (
+            <AboutCard key={i} {...p} index={i} />
           ))}
         </div>
       </section>
