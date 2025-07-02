@@ -5,6 +5,8 @@ import React from 'react';
 import AboutCard from '@/components/AboutCard';
 import OurProjects from '@/components/OurProjects';
 import InteriorDesign from '@/components/Interior';
+import HeroSection2 from '@/components/Hero2';
+import Contact from '@/components/Contact';
 
 const Main = () => {
   const properties = [
@@ -36,6 +38,8 @@ const Main = () => {
 
       <OurProjects />
       <InteriorDesign />
+      <HeroSection2 />
+      <Contact />
       <Footer />
     </div>
   );

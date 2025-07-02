@@ -37,7 +37,7 @@ export default function OurProjects() {
   ];
 
   return (
-    <section className="py-16 text-center text-white bg-[#873e23]" id="102">
+    <section className="py-16 text-center text-white bg-[#873e23]" id="ourproject">
       <h2 className="text-3xl font-bold mb-10">Our Projects</h2>
 
       {/* Features Section */}

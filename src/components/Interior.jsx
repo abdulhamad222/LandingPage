@@ -28,15 +28,14 @@ export default function InteriorDesign() {
         Interior Designs
       </h2>
 
-      <div className="space-y-16 max-w-6xl mx-auto">
+      <div className="grid gap-12 max-w-6xl mx-auto">
         {designs.map((item, index) => (
           <div
             key={index}
-            className={`grid grid-cols-1 md:grid-cols-2 items-center gap-10 ${
-              index % 2 !== 0 ? "md:flex-row-reverse" : ""
-            }`}
+            className="bg-white rounded-lg overflow-hidden shadow-md"
           >
-            <div className="aspect-[3/2] w-full relative rounded-lg overflow-hidden shadow-lg">
+            {/* Image with shorter height */}
+            <div className="relative w-full h-64">
               <Image
                 src={item.image}
                 alt={item.title}
@@ -44,8 +43,10 @@ export default function InteriorDesign() {
                 className="object-cover"
               />
             </div>
-            <div className="text-left">
-              <h3 className="text-2xl font-bold text-[#873e23] mb-3">
+
+            {/* Text below image */}
+            <div className="p-6 text-center md:text-left">
+              <h3 className="text-2xl font-bold text-[#873e23] mb-2">
                 {item.title}
               </h3>
               <p className="text-lg text-gray-700 leading-relaxed">

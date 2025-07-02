@@ -13,15 +13,18 @@ export default function Navbar() {
 
       {/* Desktop Menu */}
       <div className="hidden md:flex space-x-6">
-        <Link href="#101">About</Link>
-        <Link href="#102">Our Projects</Link>
+        <Link href="#about">About</Link>
+        <Link href="#ourproject">Our Projects</Link>
         <Link href="#interior">Interior</Link>
       </div>
 
       {/* Contact Button */}
-      <button className="hidden md:block bg-[#873e23] text-white hover:bg-[#833e26] px-4 py-2 rounded">
+      <Link
+        href="#contact"
+        className="hidden md:block bg-[#873e23] text-white hover:bg-[#833e26] px-4 py-2 rounded"
+      >
         Contact
-      </button>
+      </Link>
 
       {/* Mobile Menu Button */}
       <button
@@ -35,12 +38,16 @@ export default function Navbar() {
       {/* Mobile Dropdown */}
       {menuOpen && (
         <div className="absolute top-full left-0 w-full bg-white shadow-md flex flex-col items-center space-y-4 py-4 md:hidden z-50">
-          <Link href="#" onClick={() => setMenuOpen(false)}>About</Link>
-          <Link href="#" onClick={() => setMenuOpen(false)}>Our Projects</Link>
+          <Link href="#about" onClick={() => setMenuOpen(false)}>About</Link>
+          <Link href="#ourproject" onClick={() => setMenuOpen(false)}>Our Projects</Link>
           <Link href="#interior" onClick={() => setMenuOpen(false)}>Interior</Link>
-          <button className="bg-[#873e23] text-white hover:bg-[#833e26] px-4 py-2 rounded">
+          <Link
+            href="#contact"
+            onClick={() => setMenuOpen(false)}
+            className="bg-[#873e23] text-white hover:bg-[#833e26] px-4 py-2 rounded"
+          >
             Contact
-          </button>
+          </Link>
         </div>
       )}
     </nav>
