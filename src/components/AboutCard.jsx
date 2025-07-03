@@ -1,10 +1,11 @@
 import Image from 'next/image';
+import 'animate.css';
 
 export default function AboutCard({ image, title, price}) {
 
   return (
     <div
-      className={'border rounded-lg overflow-hidden shadow hover:shadow-xl transition'}
+      className={'border rounded-lg overflow-hidden shadow hover:shadow-xl transition animate__animated animate__fadeIn'}
       id="about"
     >
       <Image src={image} alt={title} width={400} height={250} />

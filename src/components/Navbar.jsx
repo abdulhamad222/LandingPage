@@ -1,13 +1,14 @@
 'use client';
 import Link from 'next/link';
 import { useState } from 'react';
-import { Menu, X } from 'lucide-react'; // Lucide icons for menu
+import { Menu, X } from 'lucide-react';
+import 'animate.css';
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="flex justify-evenly items-center p-6 shadow-md relative">
+    <nav className="animate__animated animate__fadeIn flex justify-evenly items-center p-6 shadow-md relative">
       {/* Logo */}
       <h1 className="text-2xl font-bold text-[#873e23]">EstatePro</h1>
 
@@ -21,7 +22,7 @@ export default function Navbar() {
       {/* Contact Button */}
       <Link
         href="#contact"
-        className="hidden md:block bg-[#873e23] text-white hover:bg-[#833e26] px-4 py-2 rounded"
+        className="hidden md:block bg-[#873e23] text-white hover:bg-[#9e4b2f] px-4 py-2 rounded"
       >
         Contact
       </Link>

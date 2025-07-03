@@ -1,4 +1,5 @@
 import Image from "next/image";
+import 'animate.css';
 
 export default function InteriorDesign() {
   const designs = [
@@ -24,7 +25,7 @@ export default function InteriorDesign() {
 
   return (
     <section className="py-16 px-6 bg-[#fcf9cc]" id="interior">
-      <h2 className="text-3xl md:text-4xl font-bold text-center text-[#873e23] mb-12">
+      <h2 className="text-3xl md:text-4xl font-bold text-center text-[#873e23] mb-12 animate__animated animate__fadeIn">
         Interior Designs
       </h2>
 
@@ -32,7 +33,7 @@ export default function InteriorDesign() {
         {designs.map((item, index) => (
           <div
             key={index}
-            className="bg-white rounded-lg overflow-hidden shadow-md"
+            className="bg-white rounded-lg overflow-hidden shadow-md animate__animated animate__fadeIn"
           >
             {/* Image with shorter height */}
             <div className="relative w-full h-64">

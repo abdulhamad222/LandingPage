@@ -1,5 +1,6 @@
 'use client';
 import Image from 'next/image';
+import 'animate.css';
 
 export default function HeroSection() {
 
@@ -15,7 +16,7 @@ export default function HeroSection() {
         <div className="absolute inset-0 bg-black/40" />
       </div>
 
-      <div className="h-full flex flex-col justify-center items-center text-center px-6">
+      <div className="h-full flex flex-col justify-center items-center text-center px-6 animate__animated animate__fadeInDown">
         <h2
           className={'font-bold text-white transition-transform duration-500 sm:text-4xl md:text-5xl'}
         >
@@ -24,9 +25,6 @@ export default function HeroSection() {
         <p className="mt-4 text-white text-base sm:text-lg md:text-xl">
           Luxury real estate for everyone
         </p>
-        <button className="mt-6 px-6 py-3 bg-[#873e23] text-white hover:bg-[#833e26] rounded text-sm md:text-base">
-          Browse Listings
-        </button>
       </div>
     </section>
   );

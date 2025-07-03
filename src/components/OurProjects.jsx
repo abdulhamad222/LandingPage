@@ -1,4 +1,5 @@
 import Image from "next/image";
+import 'animate.css';
 
 export default function OurProjects() {
   const features = [
@@ -37,13 +38,20 @@ export default function OurProjects() {
   ];
 
   return (
-    <section className="py-16 text-center text-white bg-[#873e23]" id="ourproject">
-      <h2 className="text-3xl font-bold mb-10">Our Projects</h2>
+    <section className="py-16 text-center text-white bg-[#873e23] overflow-hidden" id="ourproject">
+      <h2 className="text-3xl font-bold mb-10 animate__animated animate__fadeIn">Our Projects</h2>
 
       {/* Features Section */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 px-4">
         {features.map((f, idx) => (
-          <div key={idx} className="bg-[#fcf9cc] text-gray-800 p-6 rounded shadow hover:shadow-xl transition">
+          <div
+            key={idx}
+            className={`
+              bg-[#fcf9cc] text-gray-800 p-6 rounded shadow hover:shadow-xl transition
+              animate__animated animate__fadeInDown
+            `}
+            style={{ animationDelay: `${idx * 0.2}s` }}
+          >
             {f.icon}
             <h3 className="text-xl font-semibold">{f.title}</h3>
             <p className="mt-2 text-gray-500">{f.desc}</p>
@@ -54,7 +62,7 @@ export default function OurProjects() {
       {/* Project Showcases */}
       <div className="mt-16 space-y-16 px-6 max-w-6xl mx-auto">
         {/* Project 1 */}
-        <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-8 animate__animated animate__fadeInLeft">
           <div className="aspect-[3/2] w-full relative rounded-lg overflow-hidden shadow-md">
             <Image
               src="/images/project1.jpg"
@@ -72,7 +80,7 @@ export default function OurProjects() {
         </div>
 
         {/* Project 2 */}
-        <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-8 md:flex-row-reverse">
+        <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-8 md:flex-row-reverse animate__animated animate__fadeInRight delay-500">
           <div className="text-left text-white">
             <h3 className="text-2xl font-bold mb-2">Urban City Apartment</h3>
             <p className="text-lg leading-relaxed text-[#f0e8d8]">
@@ -90,7 +98,7 @@ export default function OurProjects() {
         </div>
 
         {/* Project 3 */}
-        <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-8 animate__animated animate__fadeInLeft delay-700">
           <div className="aspect-[3/2] w-full relative rounded-lg overflow-hidden shadow-md">
             <Image
               src="/images/project3.jpg"
